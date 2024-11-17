@@ -7,13 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_image" />
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="157dp"
+        android:layout_height="84dp"
+        android:background="#CCFFFFFF"
+        android:text="@string/app_name"
+        android:textSize="72sp"
+        app:layout_constraintBottom_toBottomOf="@id/subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        tools:layout_editor_absoluteX="127dp" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sub_title"
+        android:background="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/app_title"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"/>
+
+    <EditText
+        android:id="@+id/inputTextField"
+        android:layout_width="306sp"
+        android:layout_height="57sp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/input_town"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/subtitle"
+        app:layout_constraintStart_toStartOf="@+id/subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_button"
+        app:layout_constraintEnd_toEndOf="@+id/inputTextField"
+        app:layout_constraintStart_toStartOf="@+id/inputTextField"
+        app:layout_constraintTop_toBottomOf="@+id/inputTextField" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
